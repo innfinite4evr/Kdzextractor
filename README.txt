@@ -1,11 +1,27 @@
 -------------------------------------------
 
 LGE KDZ Utilities
-originally
+
 Copyright 2013 "IOMonster" (thecubed on XDA and GitHub)
 Copyright 2016 Elliott Mitchell
-
+mergersystem.py is by Cybojenix <anthonydking@slimroms.net>
+Its just tweaked to work with boot.img's as mergerboot.py
 -------------------------------------------
+
+To simply extract you Kdz firmware
+
+chmod +x run.sh
+then ./run.sh
+
+What it does:
+Asks user for kdz file name
+Converts .kdz file into .dz with unkdz.py
+Extracts .dz file into a folder where partitions are in the format of system_***.bin, boot_***.bin
+Here *** are offsets which Lg tools use to write on emmc
+Converts system_***.bin into one system.img
+Mounts that system.img and extracts into in working directory
+Converts boot_***.bin into one boot.img and moves it into working directory
+Some Cleanup.
 
 These two scripts will allow you to extract both KDZ files and DZ files
 
